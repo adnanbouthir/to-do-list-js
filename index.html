@@ -19,6 +19,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
   </head>
   <body class="bg-secondary">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark py-3">
@@ -105,10 +110,35 @@
 
       <div class="display py-5">
         <div class="projects">
-            <div class="form-group w-100">
-                <form class="d-flex justify-content-center" action="#" method="get">
-                    <input class="input-project w-50 me-1 py-1" type="text" name="project-field" id="">
-                    <input class="btn btn-secondary btn-sm" type="submit" value="Create Task">
+            <div class="form-group w-100 d-flex flex-column justify-content-center">
+                <div class="d-flex justify-content-center" action="#" method="get">
+                    <a class="btn btn-secondary new-task" id="new-task" href="#">New Task</a>
+                </div>
+                <form class="task-form p-5 rounded " id="task-form" action="#" method="get">
+                  <div class="form-group d-flex flex-column align-items-center mt-5">
+                    <h1>Create New Task</h1>
+                  <hr class="w-50">
+                  </div>
+                    <div class="form-group my-3 mt-5">
+                      <label for="name"></label>
+                      <input class="w-100 input-style py-1" type="text" name="taskname" id="taskname">
+                    </div>
+                    <div class="form-group my-3">
+                      <label for="description"></label>
+                      <input class="w-100 input-style py-1" type="text" name="taskname" id="taskname">
+                    </div>
+                   
+                    <div class="form-group my-3 mt-5 text-center">
+                        <input type="radio" name="priority" id="high" value="high">
+                        <label for="high">High</label>
+                        <input type="radio" name="priority" id="medium" value="medium">
+                        <label for="medium">Medium</label>
+                        <input type="radio" name="priority" id="low" value="low">
+                        <label for="low">Low</label>
+                    </div>
+                    <div class="form-group my-5 mt-5 d-flex justify-content-center">
+                      <input class="btn btn-secondary py-2 px-4 fs-5" type="submit" value="Create">
+                    </div>
                 </form>
             </div>
             <div class="mx-5 mt-5">
@@ -183,8 +213,7 @@
     </div>
 
     <!-- main-content -->
-
-
+    <script src="js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

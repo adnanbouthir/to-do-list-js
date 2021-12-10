@@ -76,9 +76,16 @@
     left: 34%;
     background-color: rgba(233, 229, 229, 0.918);
     width: 50%;
-    height: 60%;
+    height: 70%;
     display: none;
 
+}
+
+.close-task-form
+{
+    position:absolute;
+    top: 0%;
+    right: 0%;
 }
 
 .input-style
